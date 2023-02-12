@@ -17,8 +17,8 @@
           <h4>Director: {{oneMovie.director}}</h4>
           <h4>Stars</h4>
           <ul>
-            {{#each this.oneMovie}}
-              <li>{{this.stars}}</li>
+            {{#each oneMovie.stars}}
+              <li>{{this}}</li>
             {{/each}}
           </ul>
           <p>{{oneMovie.description}}</p>
