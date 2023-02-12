@@ -1,0 +1,31 @@
+<div class="container-fluid" style="padding: 0px">  
+  <hr>
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-10">
+      <a style="text-decoration: underline" href="/movies">Go back</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-2">
+      <img src="{{oneMovie.image}}" alt="movie">
+    </div>
+    <div class="col-sm-10">
+      <div class="row">
+        <div class="col-sm-6">
+          <h3>{{oneMovie.title}}</h3>
+          <h4>Director: {{oneMovie.director}}</h4>
+          <h4>Stars</h4>
+          <ul>
+            {{#each this.oneMovie}}
+              <li>{{this.stars}}</li>
+            {{/each}}
+          </ul>
+          <p>{{oneMovie.description}}</p>
+          <p> {{#each oneMovie.showtimes}} {{this}} |{{/each}}</p>
+        </div>
+        <div class="col-sm-6"></div>
+      </div>
+    </div>
+  </div>
+</div>

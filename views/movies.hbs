@@ -1,12 +1,19 @@
-<div>
-  <h2>{{title}} Cinema</h2>
-  <h4>Click on the movies to check the showtimes!</h4>
-
-  <div>
+<hr>
+<div class="container" style="margin: 0px 50px">
+<h2>{{title}} Cinema</h2>
+<h4>Click on the movies to check the showtimes!</h4>
+<br>
+<br>
+  <div class="row">
     {{#each this.allMovies}}
-      <img src="" alt="">
-      <h6>{{this.name}}</h6>
-      <p></p>
-    {{/each}}  
+      <div class="col-sm-4">
+        <div style="">
+          <img class="movie-img" src="{{this.image}}" alt="movie">
+          <h5 style="margin-left: 35px">{{this.title}}</h5>
+          <p><a style="margin-left: 85px; text-decoration: underline" href="/movies/{{this._id}}">See more</a></p>
+          <br>
+        </div>
+      </div>
+    {{/each}}
   </div>
 </div>
